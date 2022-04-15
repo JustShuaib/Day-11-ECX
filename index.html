@@ -15,35 +15,50 @@
   <body>
     <main>
       <!-- Rating state start -->
-      <section>
-        <img src="./images/icon-star.svg" alt="star" />
-        <h1>How did we do?</h1>
-        <p>
+      <section class="card">
+        <img src="./images/icon-star.svg" alt="star" class="card__img" />
+        <h1 class="card__heading">How did we do?</h1>
+        <p class="card__copy">
           Please let us know how we did with your support request. All feedback
           is appreciated to help us improve our offering!
         </p>
-        <ul id="rate">
-          <li><button type="button">1</button></li>
-          <li><button type="button">2</button></li>
-          <li><button type="button">3</button></li>
-          <li><button type="button">4</button></li>
-          <li><button type="button">5</button></li>
+        <ul id="rate" class="card__list-group">
+          <li class="card__list-item">
+            <button class="card__list-btn card__list-btn--first" type="button">
+              1
+            </button>
+          </li>
+          <li class="card__list-item">
+            <button class="card__list-btn" type="button">2</button>
+          </li>
+          <li class="card__list-item">
+            <button class="card__list-btn" type="button">3</button>
+          </li>
+          <li class="card__list-item">
+            <button class="card__list-btn" type="button">4</button>
+          </li>
+          <li class="card__list-item">
+            <button class="card__list-btn" type="button">5</button>
+          </li>
         </ul>
         <button class="submit-btn" type="button">Submit</button>
       </section>
       <!-- Rating state end -->
 
       <!-- Thank you state start -->
-      <section class="thank-you-state">
-        <button class="home">Back to home</button>
-        <img src="./images/illustration-thank-you.svg" alt="Thank you" />
+      <section class="card thank-you-state">
+        <img
+          src="./images/illustration-thank-you.svg"
+          alt="Thank you"
+          class="thank-you-state__img"
+        />
         <p class="selected-container">
           You selected <span id="selected-rating"></span> out of 5
         </p>
-        <h2>Thank you!</h2>
-        <p>
+        <h2 class="card__heading--copy">Thank you!</h2>
+        <p class="card__copy">
           We appreciate you taking the time to give a rating. If you ever need
-          more support, don’t hesitate to get in touch!
+          more support, don't hesitate to get in touch!
         </p>
       </section>
     </main>

@@ -1,12 +1,10 @@
-const list = document.getElementById("rate");
-const submitBtn = document.querySelector(".submit-btn");
-const selectedRating = document.getElementById("selected-rating");
-const homeBtn = document.querySelector(".home");
+const list = document.getElementById("rate"),
+  submitBtn = document.querySelector(".submit-btn"),
+  selectedRating = document.getElementById("selected-rating"),
+  thankYouState = document.querySelector(".thank-you-state");
+
 submitBtn.addEventListener("click", handleSubmit);
-const thankYouState = document.querySelector(".thank-you-state");
-const selectedContainer = document.querySelector(".selected-container");
 list.addEventListener("click", handleClick);
-homeBtn.addEventListener("click", backToHome);
 
 let ratingValue;
 function handleClick(e) {
@@ -19,16 +17,9 @@ function handleClick(e) {
     ratingValue = e.target.textContent;
   }
 }
-function handleSubmit(e) {
+function handleSubmit() {
   if (ratingValue > 0) {
     selectedRating.textContent = ratingValue;
     thankYouState.classList.add("show");
   }
-}
-function backToHome() {
-  [...list.children].forEach((list) => {
-    list.firstElementChild.classList.remove("selected-btn");
-  });
-  ratingValue = 0;
-  thankYouState.classList.remove("show");
 }

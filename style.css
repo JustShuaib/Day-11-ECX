@@ -11,7 +11,6 @@ body {
 }
 
 main {
-  color: white;
   background-color: hsl(216, 12%, 8%);
   color: white;
   height: 100vh;
@@ -20,128 +19,91 @@ main {
   justify-content: center;
   align-items: center;
 }
-section p {
-  line-height: 1.5rem;
-  color: hsl(217, 12%, 63%);
-}
-
-section ul {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-section {
-  border-radius: 10px;
+.card {
+  border-radius: 20px;
   background-color: hsl(213, 20%, 18%);
-  width: 90%;
-  max-width: 400px;
+  width: min(90%, 400px);
   padding: 2rem;
   z-index: 2;
 }
-
-section img {
+.card__img {
   padding: 0.7rem;
   border-radius: 100%;
   background-color: hsl(217, 15%, 24%);
 }
-
-section h1 {
+.card__heading {
   font-size: 1.5rem;
   margin: 1rem 0;
 }
+.card__copy {
+  line-height: 1.5rem;
+  color: hsl(217, 12%, 63%);
+}
 
-section ul {
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
+.card__list-group {
+  display: flex;
   justify-content: space-between;
   margin: 1.5rem 0;
 }
 
-section ul li {
+.card__list-item {
   list-style: none;
 }
 
-section ul li button {
+.card__list-btn {
   background: inherit;
   border: none;
   cursor: pointer;
-  font-family: Overpass, sans-serif;
+  font: inherit;
   color: hsl(217, 12%, 63%);
-  padding: 0.8rem 1.15rem;
+  padding: 0.8rem 1.2rem;
   background-color: hsl(217, 15%, 24%);
   border-radius: 50%;
+  transition: all 0.3s linear;
 }
-
-section ul li button:hover {
+.card__list-btn--first {
+  padding: 0.8rem 1.3rem;
+}
+.card__list-btn:hover {
   color: white;
   background-color: hsl(25, 97%, 53%);
 }
-
-section .submit-btn {
+.selected-btn {
+  background: hsl(217, 12%, 63%);
+  color: white;
+}
+.submit-btn {
   text-transform: uppercase;
-  font-family: Overpass, sans-serif;
+  font: inherit;
   background-color: hsl(25, 97%, 53%);
   border-radius: 30px;
-  padding: 1rem;
+  padding: 0.8rem;
   letter-spacing: 0.2rem;
-  font-weight: 700;
   width: 100%;
   border: none;
   color: white;
   cursor: pointer;
+  transition: 0.3s ease-in;
 }
 
-section .submit-btn:hover {
+.submit-btn:hover {
   background-color: white;
   color: hsl(25, 97%, 53%);
 }
 
-.selected-btn {
-  background-color: hsl(217, 12%, 63%);
-  color: white;
-}
-
 .thank-you-state {
-  border-radius: 10px;
-  background-color: hsl(213, 20%, 18%);
-  width: 90%;
-  max-width: 400px;
-  padding: 2rem;
   opacity: 0;
   position: absolute;
   text-align: center;
   z-index: 0;
-  font-family: Overpass, sans-serif;
 }
 
-.thank-you-state img {
+.thank-you-state__img {
   border-radius: 0%;
   background: inherit;
 }
 
-.thank-you-state button {
-  position: absolute;
-  left: 4%;
-  top: 2.5%;
-  background-color: hsl(217, 15%, 24%);
-  outline: none;
-  border: none;
-  color: white;
-  padding: 0.5rem 1rem;
-  border-radius: 20px;
-  font-family: inherit;
-}
-
-.thank-you-state button:hover {
-  background-color: hsl(25, 97%, 53%);
-  cursor: pointer;
-}
-
-.thank-you-state .selected-container {
+.selected-container {
   border-radius: 20px;
   color: hsl(25, 97%, 53%);
   background-color: hsl(217, 15%, 24%);
@@ -149,12 +111,21 @@ section .submit-btn:hover {
   margin: 1.5rem 0;
   display: inline-block;
 }
-
-.thank-you-state h2 {
+.card__heading--copy {
   margin-bottom: 0.5rem;
 }
-
 .show {
   opacity: 1;
   z-index: 2;
+  animation: 0.5s linear show-thank-you;
+}
+
+@keyframes show-thank-you {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
 }
