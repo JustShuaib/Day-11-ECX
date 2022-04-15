@@ -5,7 +5,6 @@ const list = document.getElementById("rate"),
 
 submitBtn.addEventListener("click", handleSubmit);
 list.addEventListener("click", handleClick);
-// submitBtn.classList.
 let ratingValue;
 function handleClick(e) {
   const lists = [...e.currentTarget.children];
