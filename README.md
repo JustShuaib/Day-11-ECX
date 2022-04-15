@@ -1,1 +1,1 @@
-https://shuaib-interactive-rating.netlify.app/
+https://justshuaib.github.io/rating-component/
