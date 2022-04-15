@@ -5,14 +5,14 @@ const list = document.getElementById("rate"),
 
 submitBtn.addEventListener("click", handleSubmit);
 list.addEventListener("click", handleClick);
-
+// submitBtn.classList.
 let ratingValue;
 function handleClick(e) {
   const lists = [...e.currentTarget.children];
   lists.forEach((list) => {
     list.firstElementChild.classList.remove("selected-btn");
   });
-  if (e.target.tagName === "BUTTON") {
+  if (e.target.classList.contains("card__list-btn")) {
     e.target.classList.add("selected-btn");
     ratingValue = e.target.textContent;
   }
