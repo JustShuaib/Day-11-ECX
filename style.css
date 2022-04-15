@@ -1,0 +1,164 @@
+@import url("https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap");
+section p {
+  line-height: 1.5rem;
+  color: #959eac;
+}
+
+main,
+section ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  background: #121417;
+  font-family: Overpass, sans-serif;
+}
+
+main {
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  height: 99vh;
+  color: white;
+}
+
+section {
+  border-radius: 10px;
+  background: #252d37;
+  width: 90%;
+  max-width: 400px;
+  padding: 2rem;
+  z-index: 2;
+}
+
+section img {
+  padding: 0.7rem;
+  border-radius: 100%;
+  background: #343b46;
+}
+
+section h1 {
+  font-size: 1.5rem;
+  margin: 1rem 0;
+}
+
+section ul {
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  margin: 1.5rem 0;
+}
+
+section ul li {
+  list-style: none;
+}
+
+section ul li button {
+  background: inherit;
+  border: none;
+  cursor: pointer;
+  font-family: Overpass, sans-serif;
+  color: #959eac;
+  padding: 0.8rem 1.15rem;
+  background: #343b46;
+  border-radius: 50%;
+}
+
+section ul li button:hover {
+  color: white;
+  background: #fb7413;
+}
+
+section .submit-btn {
+  text-transform: uppercase;
+  font-family: Overpass, sans-serif;
+  background: #fb7413;
+  border-radius: 30px;
+  padding: 1rem;
+  letter-spacing: 0.2rem;
+  font-weight: 700;
+  width: 100%;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+section .submit-btn:hover {
+  background-color: white;
+  color: #fb7413;
+}
+
+.selected-btn {
+  background: #959eac;
+  color: white;
+}
+
+.thank-you-state {
+  border-radius: 10px;
+  background: #252d37;
+  width: 90%;
+  max-width: 400px;
+  padding: 2rem;
+  opacity: 0;
+  position: absolute;
+  text-align: center;
+  z-index: 0;
+  font-family: Overpass, sans-serif;
+}
+
+.thank-you-state img {
+  border-radius: 0%;
+  background: inherit;
+}
+
+.thank-you-state button {
+  position: absolute;
+  left: 4%;
+  top: 2.5%;
+  background: #343b46;
+  outline: none;
+  border: none;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-family: inherit;
+}
+
+.thank-you-state button:hover {
+  background: #fb7413;
+  cursor: pointer;
+}
+
+.thank-you-state .selected-container {
+  border-radius: 20px;
+  color: #fb7413;
+  background: #343b46;
+  padding: 0.5rem 1rem;
+  margin: 1.5rem 0;
+  display: inline-block;
+}
+
+.thank-you-state h2 {
+  margin-bottom: 0.5rem;
+}
+
+.show {
+  opacity: 1;
+  z-index: 2;
+}
