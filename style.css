@@ -1,10 +1,30 @@
 @import url("https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap");
-section p {
-  line-height: 1.5rem;
-  color: #959eac;
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
-main,
+body {
+  font-family: Overpass, sans-serif;
+}
+
+main {
+  color: white;
+  background-color: hsl(216, 12%, 8%);
+  color: white;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+section p {
+  line-height: 1.5rem;
+  color: hsl(217, 12%, 63%);
+}
+
 section ul {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -14,33 +34,9 @@ section ul {
   align-items: center;
 }
 
-* {
-  padding: 0;
-  margin: 0;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-}
-
-body {
-  background: #121417;
-  font-family: Overpass, sans-serif;
-}
-
-main {
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  height: 99vh;
-  color: white;
-}
-
 section {
   border-radius: 10px;
-  background: #252d37;
+  background-color: hsl(213, 20%, 18%);
   width: 90%;
   max-width: 400px;
   padding: 2rem;
@@ -50,7 +46,7 @@ section {
 section img {
   padding: 0.7rem;
   border-radius: 100%;
-  background: #343b46;
+  background-color: hsl(217, 15%, 24%);
 }
 
 section h1 {
@@ -74,21 +70,21 @@ section ul li button {
   border: none;
   cursor: pointer;
   font-family: Overpass, sans-serif;
-  color: #959eac;
+  color: hsl(217, 12%, 63%);
   padding: 0.8rem 1.15rem;
-  background: #343b46;
+  background-color: hsl(217, 15%, 24%);
   border-radius: 50%;
 }
 
 section ul li button:hover {
   color: white;
-  background: #fb7413;
+  background-color: hsl(25, 97%, 53%);
 }
 
 section .submit-btn {
   text-transform: uppercase;
   font-family: Overpass, sans-serif;
-  background: #fb7413;
+  background-color: hsl(25, 97%, 53%);
   border-radius: 30px;
   padding: 1rem;
   letter-spacing: 0.2rem;
@@ -101,17 +97,17 @@ section .submit-btn {
 
 section .submit-btn:hover {
   background-color: white;
-  color: #fb7413;
+  color: hsl(25, 97%, 53%);
 }
 
 .selected-btn {
-  background: #959eac;
+  background-color: hsl(217, 12%, 63%);
   color: white;
 }
 
 .thank-you-state {
   border-radius: 10px;
-  background: #252d37;
+  background-color: hsl(213, 20%, 18%);
   width: 90%;
   max-width: 400px;
   padding: 2rem;
@@ -131,7 +127,7 @@ section .submit-btn:hover {
   position: absolute;
   left: 4%;
   top: 2.5%;
-  background: #343b46;
+  background-color: hsl(217, 15%, 24%);
   outline: none;
   border: none;
   color: white;
@@ -141,14 +137,14 @@ section .submit-btn:hover {
 }
 
 .thank-you-state button:hover {
-  background: #fb7413;
+  background-color: hsl(25, 97%, 53%);
   cursor: pointer;
 }
 
 .thank-you-state .selected-container {
   border-radius: 20px;
-  color: #fb7413;
-  background: #343b46;
+  color: hsl(25, 97%, 53%);
+  background-color: hsl(217, 15%, 24%);
   padding: 0.5rem 1rem;
   margin: 1.5rem 0;
   display: inline-block;
